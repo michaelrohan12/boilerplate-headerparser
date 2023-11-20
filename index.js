@@ -25,7 +25,11 @@ app.route("/api/hello").get((req, res) => {
 });
 
 app.route("/api/whoami").get((req, res) => {
-  res.json({ ipaddress: req.ip, language: req.headers["accept-language"], software: req.headers["user-agent"] });
+  res.json({
+    ipaddress: req.ip,
+    language: req.headers["accept-language"],
+    software: req.headers["user-agent"],
+  });
 });
 
 // listen for requests :)
